@@ -2,7 +2,7 @@ const { OAuth2Client } = require('google-auth-library');
 const { google } = require('googleapis');
 const redis = require('redis');
 
-const keys = require('../oauth2.keys.json'); // for local testing dev
+// const keys = require('../oauth2.keys.json'); // for local testing dev
 const { parseEventsData } = require('../utils');
 
 const redisClient = redis.createClient({ host: process.env.REDIS_SERVER || 'localhost', port: 6379 });
