@@ -9,7 +9,7 @@ const router = require('./router');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
-app.use(express.static(path.join(__dirname.replace('server', ''), 'build/index.html')));
+app.use(express.static(path.join(__dirname, 'client/build')))
 
 router(app);
 

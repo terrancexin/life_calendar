@@ -2,7 +2,7 @@
 ###### Calendar displays good times of your life!
 
 ## Demo
-![screenshot](./demo.gif)
+![screenshot](./docs/demo.gif)
 
 ## Local set up
 ###### Set up process assumes that all of the above technologies are available on your local machine
