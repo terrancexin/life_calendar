@@ -1,5 +1,5 @@
 # Life Calendar
-###### Calendar displays good times of your life!
+###### OAuth 2.0 authentication and Google Calendar's API - displays good times of your life!
 
 ## Demo
 ![screenshot](./docs/demo.gif)
