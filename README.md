@@ -1,5 +1,5 @@
 # Life Calendar
-###### OAuth 2.0 authentication and Google Calendar's API - displays good times of your life!
+###### OAuth 2.0 authentication and Google Calendar's API - displaying good times of your life!
 
 ## Demo
 ![screenshot](./docs/demo.gif)
@@ -8,9 +8,9 @@
 ###### Set up process assumes that all of the above technologies are available on your local machine
 1. Run `git clone https://github.com/terrancexin/life_calendar && cd life_calendar && npm i`
 2. Obtain OAuth 2.0 credentials from the Google API Console. `client_id` and `client_secret` add into `oauth2.keys.json` file
-3. Start the app by `npm start`
-4. Make sure `redis-server` is running
-5. Start the server by `npm run server`
+5. `cd client && npm i`
+4. Make sure `redis-server` is running locally
+3. Start the app by `npm run dev` at the root directory
 ###### Ready! Go to: [http://localhost:3000](http://localhost:3000)
 
 ## Tech Stack

@@ -3,7 +3,7 @@ import React from 'react';
 import '../styles/login.css';
 import googleImg from '../assets/google.png';
 
-const authUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_AUTH_URL_PROD : 'http://localhost:5000/auth';
+const authUrl = process.env.NODE_ENV === 'production' ? process.env.REACT_APP_AUTH_URL : 'http://localhost:5000/auth';
 
 export default function Login() {
   return (
