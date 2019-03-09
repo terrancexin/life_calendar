@@ -5,7 +5,7 @@ const redis = require('redis');
 const keys = require('../oauth2.keys.json'); // for local testing dev
 const { parseEventsData } = require('../utils');
 
-const redisClient = redis.createClient({ host: 'localhost', port: 6379 });
+const redisClient = redis.createClient({ host: process.env.REDIS_SERVER || 'localhost', port: 6379 });
 const oAuth2Client = new OAuth2Client(
   process.env.CLIENT_ID || keys.web.client_id,
   process.env.CLIENT_SECRET || keys.web.client_secret,

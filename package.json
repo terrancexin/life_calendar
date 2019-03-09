@@ -10,14 +10,17 @@
     "nodemon": "^1.18.10",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "redis": "^2.8.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "ui": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "nodemon app.js"
+    "server": "nodemon server/app.js",
+    "start": "node server/app.js",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +30,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "proxy": "http://localhost:5000/"
 }
