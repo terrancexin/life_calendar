@@ -2,13 +2,13 @@ const { OAuth2Client } = require('google-auth-library');
 const { google } = require('googleapis');
 const redis = require('redis').createClient(process.env.REDIS_URL || 'redis://localhost:6379');
 
-const keys = require('./oauth2.keys.json'); // for local testing dev
+// const keys = require('./oauth2.keys.json'); // for dev local testing
 const { parseEventsData } = require('./utils');
 
 const oAuth2Client = new OAuth2Client(
-  process.env.CLIENT_ID || keys.web.client_id,
-  process.env.CLIENT_SECRET || keys.web.client_secret,
-  process.env.REDIRECT_URL || keys.web.redirect_uris[1]
+  process.env.CLIENT_ID, // || keys.web.client_id,
+  process.env.CLIENT_SECRET, // || keys.web.client_secret,
+  process.env.REDIRECT_URL, // || keys.web.redirect_uris[1]
 );
 
 redis.on('ready', () => console.log("Redis is ready"));
