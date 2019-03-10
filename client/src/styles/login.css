@@ -12,7 +12,8 @@
 	background: linear-gradient(to right, #FF4B2B, #FF416C);
   background-repeat: no-repeat;
   background-size: cover;
-  color: #FFFFFF;
+	color: #FFFFFF;
+	margin-bottom: 70px;
 }
 
 .login__header {

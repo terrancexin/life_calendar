@@ -3,30 +3,32 @@ import React, { useEffect, useState } from 'react';
 import '../styles/app.css';
 import Login from './Login';
 import Events from './Events';
+import Footer from './Footer';
 
 export default function App() {
-  const [token, setToken] = useState(false);
+  const [isAuth, setIsAuth] = useState(false);
 
   useEffect(() => {
-    fetchTokenAPI()
+    fetchLoginAPI()
   }, []);
 
   return (
     <div className="app">
       <h1>Life Calendar</h1>
-      {token && <button onClick={handleLogOut}>Log out</button>}
-      {token ? <Events /> : <Login />}
+      {isAuth && <button onClick={handleLogOut}>Log out</button>}
+      {isAuth ? <Events /> : <Login />}
+      <Footer />
     </div>
   );
 
-  async function fetchTokenAPI() {
+  async function fetchLoginAPI() {
     try {
-      const res = await fetch('/token')
-      const { token } = await res.json();
+      const res = await fetch('/login')
+      const { isAuth } = await res.json();
 
-      setToken(token);
+      setIsAuth(isAuth);
     } catch(e) {
-      setToken(false)
+      setIsAuth(false)
       console.log(e);
     }
   }
@@ -36,7 +38,7 @@ export default function App() {
 
     fetch('/logout')
       .then(res => res.json())
-      .then(({ token }) => setToken(token))
+      .then(({ isAuth }) => setIsAuth(isAuth))
       .catch(err => console.log(`logout error: ${err}`));
   }
 }
