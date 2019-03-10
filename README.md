@@ -1,4 +1,4 @@
-# Life Calendar
+# Life Calendar ([LIVE](https://goodtime-calendar.herokuapp.com/))
 ###### OAuth 2.0 authentication and Google Calendar's API - displaying good times of your life!
 
 ## Demo
