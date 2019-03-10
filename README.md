@@ -41,7 +41,7 @@ Google Calendar authorization with OAuth 2.0
 ## Future Implementations
 - [x] Backend refactoring and clean up
 - [x] Deploy on Heroku
-- Implement redis to make subsequent calls from cache
+- [x] Implement redis to make subsequent calls from cache
 - Edge cases
   - Display date once for all events on the same day
   - Add indicator to show past events
