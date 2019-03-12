@@ -8,9 +8,9 @@
 ###### Set up process assumes that all of the above technologies are available on your local machine
 1. Run `git clone https://github.com/terrancexin/life_calendar && cd life_calendar && npm i`
 2. Obtain OAuth 2.0 credentials from the Google API Console. `client_id` and `client_secret` add into `oauth2.keys.json` file
-5. `cd client && npm i`
+3. `cd client && npm i`
 4. Make sure `redis-server` is running locally
-3. Start the app by `npm run dev` at the root directory
+5. Start the app by `npm run dev` at the root directory
 ###### Ready! Go to: [http://localhost:3000](http://localhost:3000)
 
 ## Tech Stack
